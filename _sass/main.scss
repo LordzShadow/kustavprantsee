@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$orange: #ff7500;
+$orange-invert: #fff;
+$primary: $orange;
+$primary-invert: $orange-invert;
+$footer-background-color: $primary;
+$footer-color: $primary-invert;
+$footer-padding: 40;
+
+@import "../node_modules/bulma/bulma";
+@import "../css/animate.css";
+
+.portfolio {
+  text-align: center;
+}
+
+.project {
+  position: relative;
+  height: 200px;
+}
+.image.is-512x512 {
+  width: 512px;
+  height: 512px;
+}
+.image.is-256x256 {
+  width: 256px;
+  height: 256px;
+}
+.is-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $button-color;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+}
+
+.button {
+  transition: .5s ease;
+}
+
+.section.is-primary, .section.is-primary .title, .section.is-primary .subtitle {
+  color: $primary-invert;
+  background-color: $primary;
+}
+
+footer .social-icons a.button {
+  background-color: transparent;
+  color: white;
+  border-radius: 100%;
+  margin: 0 .2rem;
+  height: 47px;
+  width: 47px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+footer .social-icons a.button:hover {
+  background-color: white;
+  color: $primary;
+}
+
+footer .social-icons {
+  margin-bottom: 40px;
+}
+/* When you mouse over the container, fade in the overlay title */
+.project:hover .is-overlay {
+  opacity: 1;
+}
