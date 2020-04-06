@@ -58,20 +58,6 @@ $footer-padding: 40;
   background-color: $primary;
 }
 
-footer .social-icons a.button {
-  background-color: transparent;
-  color: white;
-  border-radius: 100%;
-  margin: 0 .2rem;
-  height: 47px;
-  width: 47px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-footer .social-icons a.button:hover {
-  background-color: white;
-  color: $primary;
-}
-
 footer .social-icons {
   margin-bottom: 40px;
 }
