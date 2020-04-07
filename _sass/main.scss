@@ -9,20 +9,40 @@
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
-$orange: #ff7500;
+$orange: #535a52;
+$primary-half: rgba(#535a52, 0.5);
 $orange-invert: #fff;
 $primary: $orange;
 $primary-invert: $orange-invert;
-$footer-background-color: $primary;
+$footer-background-color: rgba($primary, 0.5);
 $footer-color: $primary-invert;
 $footer-padding: 40;
 
 @import "../node_modules/bulma/bulma";
 @import "../css/animate.css";
 
+body {
+  background-image: url("../images/back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero {
+  background-color: rgba($primary, 0.5);
+  color: $primary-invert;
+}
+.hero.is-primary-half {
+  background-color: $primary-half;
+  color: #fff; }
+
+  .hero .title, .hero .subtitle {
+    color: #fff;
+  }
 .portfolio {
   text-align: center;
+  background-color: rgba($primary, 0.5);
 }
+
+
 
 .project {
   position: relative;
@@ -40,7 +60,7 @@ $footer-padding: 40;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $button-color;
+  background: white;
   width: 100%;
   height: 100%;
   transition: .5s ease;
@@ -53,9 +73,21 @@ $footer-padding: 40;
   transition: .5s ease;
 }
 
-.section.is-primary, .section.is-primary .title, .section.is-primary .subtitle {
+
+.section.is-primary {
+  color: $primary;
+  background-color: rgba($primary, 0.5);
+}
+
+
+.box.title, .box.subtitle {
+  color: #535a52;
+}
+.light {
   color: $primary-invert;
-  background-color: $primary;
+}
+.subtitle.light {
+  color: $primary-invert;
 }
 
 footer .social-icons {
@@ -64,4 +96,7 @@ footer .social-icons {
 /* When you mouse over the container, fade in the overlay title */
 .project:hover .is-overlay {
   opacity: 1;
+}
+.project {
+  background-color: rgba($color: #fff, $alpha: 0.8);
 }
